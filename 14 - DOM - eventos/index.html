@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>DOM Eventos</title>
+  </head>
+  <body>
+    <h1 id="title">Soy un título</h1>
+    <h2 id="resize-message"></h2>
+    <button id="button">Soy un botón</button>
+    <p id="keyboard-message">Esperando entrada de teclado...</p>
+    <label id="label-range" for="range">0</label>
+    <input type="range" name="range" id="range" min="0" max="10" step="1" value="0" />
+    <p id="select-message">Seleccione una opción</p>
+    <select name="select" id="select">
+      <option value="default">Selecciona una opción</option>
+      <option value="item-1">Item 1</option>
+      <option value="item-2">Item 2</option>
+      <option value="item-3">Item 3</option>
+    </select>
+
+    <p id="date-message">Selecciona una fecha</p>
+    <input type="date" name="date" id="date" />
+
+    <p id="discount-message"></p>
+    <form id="form-discount">
+      <div>
+        <label for="price">Precio</label>
+        <input type="number" id="price" name="price" />
+      </div>
+      <div>
+        <label for="discount">Descuento</label>
+        <input type="number" id="discount" name="discount" />
+      </div>
+      <button>Calcular</button>
+    </form>
+
+    <input type="text" id="original-input" />
+    <input type="text" id="copy-input" />
+
+    <div>
+      <button id="previus-button">Previous</button>
+      <h2 id="slide-text"></h2>
+      <button id="next-button">Next</button>
+    </div>
+
+    <form id="form">
+      <div>
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+      </div>
+      <div>
+        <input type="checkbox" name="terms" id="terms" />
+        <label for="terms">Acepto los términos y condiciones</label>
+      </div>
+      <button id="form-button" disabled>Iniciar Sesión</button>
+    </form>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

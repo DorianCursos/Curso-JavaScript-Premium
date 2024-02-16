@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Rock, paper, scissors</title>
+  </head>
+  <body data-mode="advanced">
+    <header class="header">
+      <div class="score">
+        <span class="score__title">YOU</span>
+        <span id="points-user" class="score__points">0</span>
+      </div>
+      <div class="logo logo--advanced">
+        <span class="block">ROCK</span>
+        <span class="block">PAPER</span>
+        <span class="block">SCISSORS</span>
+        <span class="block">LIZARD</span>
+        <span class="block">SPOCK</span>
+      </div>
+      <div class="score">
+        <span class="score__title">PC</span>
+        <span id="points-pc" class="score__points">0</span>
+      </div>
+    </header>
+    <main>
+      <div id="game-items" class="game-items game-items--advanced">
+        <div class="game-item game-item--paper game-item--paper-advanced" data-item="paper">
+          <img src="./assets/images/icon-paper.svg" class="game-item__image" alt="icon paper" />
+        </div>
+        <div
+          class="game-item game-item--scissors game-item--scissors-advanced"
+          data-item="scissors"
+        >
+          <img
+            src="./assets/images/icon-scissors.svg"
+            class="game-item__image"
+            alt="icon scissors"
+          />
+        </div>
+        <div class="game-item game-item--rock game-item--rock-advanced" data-item="rock">
+          <img src="./assets/images/icon-rock.svg" class="game-item__image" alt="icon rock" />
+        </div>
+        <div class="game-item game-item--lizard" data-item="lizard">
+          <img src="./assets/images/icon-lizard.svg" class="game-item__image" alt="icon lizard" />
+        </div>
+        <div class="game-item game-item--spock" data-item="spock">
+          <img src="./assets/images/icon-spock.svg" class="game-item__image" alt="icon spock" />
+        </div>
+      </div>
+      <div id="game-results" class="game-results hide">
+        <div>
+          <h2>Your Picked</h2>
+          <div class="game-item game-item--result">
+            <img id="picked-user-image" src="./assets/images/icon-lizard.svg" alt="" />
+          </div>
+        </div>
+        <div>
+          <h2 id="game-result">YOU WIN</h2>
+          <button id="play-again">PLAY AGAIN</button>
+        </div>
+
+        <div>
+          <h2>PC Picked</h2>
+          <div class="game-item game-item--result">
+            <img id="picked-pc-image" src="./assets/images/icon-lizard.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <button id="button-rules" class="button-rules">RULES</button>
+    <div id="modal" class="modal">
+      <img src="./assets/images/image-rules-bonus.svg" alt="" />
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

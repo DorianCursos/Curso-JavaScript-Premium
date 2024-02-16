@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Generador de password</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="password-generator">
+      <input type="text" id="password" class="password" placeholder="P4$5W0RD!" readonly />
+      <label for="range" class="range-label">
+        Length:
+        <span id="password-length"></span>
+      </label>
+      <div class="range-container">
+        <span>4</span>
+        <input type="range" id="range" value="20" class="range-input" min="4" max="32" step="1" />
+        <span>32</span>
+      </div>
+      <button id="generate-password" class="button">GENERATE PASSWORD</button>
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

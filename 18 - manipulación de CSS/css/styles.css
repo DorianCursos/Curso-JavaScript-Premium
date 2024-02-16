@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  background-color: #111;
+  color: aliceblue;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: steelblue;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: limegreen;
+}
+
+.title {
+  display: block;
+}
+
+.title--hide {
+  display: none;
+}

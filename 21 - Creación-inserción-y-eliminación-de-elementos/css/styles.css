@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333;
+  color: aliceblue;
+  font-family: sans-serif;
+}
+
+.card {
+  border: 1px solid aliceblue;
+  width: 90%;
+  padding: 1rem;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 10px 10px 5px rgb(0 0 0 /0.25);
+}
+
+.card__image {
+  border-radius: 50%;
+}
+
+.card__age,
+.card__username {
+  display: block;
+  margin-bottom: 1rem;
+}

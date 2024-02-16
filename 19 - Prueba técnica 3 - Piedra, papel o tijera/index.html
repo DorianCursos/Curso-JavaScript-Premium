@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Rock, paper, scissors</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <span>YOU:</span>
+        <span id="points-user">0</span>
+      </div>
+      <div>
+        <span>PC:</span>
+        <span id="points-pc">0</span>
+      </div>
+    </header>
+    <main>
+      <div id="game-items" class="game-items">
+        <div class="game-item" data-item="paper">
+          <img src="./assets/images/icon-paper.svg" class="game-item__image" alt="icon paper" />
+        </div>
+        <div class="game-item" data-item="scissors">
+          <img
+            src="./assets/images/icon-scissors.svg"
+            class="game-item__image"
+            alt="icon scissors"
+          />
+        </div>
+        <div class="game-item" data-item="rock">
+          <img src="./assets/images/icon-rock.svg" class="game-item__image" alt="icon rock" />
+        </div>
+      </div>
+      <div>
+        <span>YOU PICKED:</span>
+        <span id="user-picked"></span>
+      </div>
+      <div>
+        <span>PC PICKED:</span>
+        <span id="pc-picked"></span>
+      </div>
+      <p id="result">You Win</p>
+    </main>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

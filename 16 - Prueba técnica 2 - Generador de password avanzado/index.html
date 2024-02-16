@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="password-generator">
+      <input type="text" class="password" id="password" placeholder="P4$5W0RD!" readonly />
+      <div>
+        <label for="range" class="range-label">LENGTH: <span id="length-text">16</span></label>
+      </div>
+      <div class="range-container">
+        <span>4</span>
+        <input id="range" type="range" class="range-input" min="4" max="32" step="1" value="16" />
+        <span>32</span>
+      </div>
+      <div id="options" class="options-container">
+        <div class="input-field">
+          <span class="option-text">Include Uppercase</span>
+          <input type="checkbox" id="uppercase" class="option-input" />
+          <label for="uppercase" class="option-label"></label>
+        </div>
+        <div class="input-field">
+          <span class="option-text">Include Lowercase</span>
+          <input type="checkbox" id="lowercase" class="option-input" />
+          <label for="lowercase" class="option-label"></label>
+        </div>
+        <div class="input-field">
+          <span class="option-text">Include Numbers</span>
+          <input type="checkbox" id="numbers" class="option-input" />
+          <label for="numbers" class="option-label"></label>
+        </div>
+        <div class="input-field">
+          <span class="option-text">Include Symbols</span>
+          <input type="checkbox" id="symbols" class="option-input" />
+          <label for="symbols" class="option-label"></label>
+        </div>
+      </div>
+      <button id="generate-password" class="button" disabled>Generate Password</button>
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
