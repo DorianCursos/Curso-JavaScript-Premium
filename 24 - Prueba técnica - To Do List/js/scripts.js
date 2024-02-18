@@ -8,6 +8,8 @@ const allFilters = document.querySelectorAll('.filter');
 
 let allTasks = [];
 
+let filterActive = 'all';
+
 let darkMode = false;
 
 if (window.matchMedia('(prefers-color-scheme:dark)').matches) {
@@ -41,10 +43,16 @@ const countItemsLeft = () => {
   }
 };
 
+const getFilteredTasks = () => {
+  if (filterActive === 'active') return allTasks.filter(task => !task.completed);
+  if (filterActive === 'completed') return allTasks.filter(task => task.completed);
+  return [...allTasks];
+};
+
 const printTasks = () => {
   const fragment = document.createDocumentFragment();
-
-  allTasks.forEach(task => {
+  const filteredTasks = getFilteredTasks();
+  filteredTasks.forEach(task => {
     const newTaskContainer = document.createElement('div');
     newTaskContainer.classList.add('task-container');
 
@@ -118,6 +126,8 @@ const setFiterActive = event => {
   if (!currentFilter) return;
   allFilters.forEach(filter => filter.classList.remove('filter-active'));
   event.target.classList.add('filter-active');
+  filterActive = currentFilter;
+  printTasks();
 };
 
 changeTheme();
