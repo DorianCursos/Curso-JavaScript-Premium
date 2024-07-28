@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <h1 class="title">TODO</h1>
+        <img id="switch" class="switch-theme" src="./assets/images/icon-moon.svg" alt="icon moon" />
+      </div>
+    </header>
+    <main class="main">
+      <form id="form" class="form">
+        <label for="input-task" class="label-task"></label>
+        <input
+          type="text"
+          id="input-task"
+          class="input-task"
+          name="task"
+          placeholder="Create a new todo..."
+        />
+      </form>
+      <div id="tasks" class="tasks"></div>
+      <div class="tasks-footer">
+        <span id="items-left">5 items left</span>
+        <button id="delete-completed" class="button-delete">Clear Completed</button>
+      </div>
+      <div id="filters" class="filters">
+        <button data-filter="all" class="filter filter-active">All</button>
+        <button data-filter="active" class="filter">Active</button>
+        <button data-filter="completed" class="filter">Completed</button>
+      </div>
+    </main>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
