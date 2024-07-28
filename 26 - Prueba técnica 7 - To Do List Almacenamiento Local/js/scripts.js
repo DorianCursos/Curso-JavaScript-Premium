@@ -51,6 +51,11 @@ const getFilteredTasks = () => {
   return [...allTasks];
 };
 
+const setTasksInLocalStorage = () => {
+  const jsonTasks = JSON.stringify(allTasks);
+  LS.setItem('tasks', jsonTasks);
+};
+
 const printTasks = () => {
   const fragment = document.createDocumentFragment();
   const filteredTasks = getFilteredTasks();
@@ -85,22 +90,21 @@ const printTasks = () => {
   tasksElement.textContent = '';
   tasksElement.append(fragment);
   countItemsLeft();
+  setTasksInLocalStorage();
 };
 
 const getTasksFromLocalStorage = () => {
   const tasks = LS.getItem('tasks');
+  countItemsLeft();
   if (!tasks) return;
-  allTasks = JSON.parse(tasks);
-  printTasks();
-};
 
-const setTasksInLocalStorage = () => {
-  LS.setItem('tasks', JSON.stringify(allTasks));
+  const localStorageTasks = JSON.parse(tasks);
+  allTasks = localStorageTasks;
+  printTasks();
 };
 
 const saveTask = task => {
   allTasks.push(task);
-  setTasksInLocalStorage();
   printTasks();
 };
 
@@ -123,19 +127,16 @@ const completeTask = id => {
   });
 
   printTasks();
-  setTasksInLocalStorage();
 };
 
 const deleteTask = id => {
   allTasks = allTasks.filter(task => task.id !== id);
   printTasks();
-  setTasksInLocalStorage();
 };
 
 const deleteAllCompletedTasks = () => {
   allTasks = allTasks.filter(task => !task.completed);
   printTasks();
-  setTasksInLocalStorage();
 };
 
 const setFiterActive = event => {
@@ -147,9 +148,8 @@ const setFiterActive = event => {
   printTasks();
 };
 
-getTasksFromLocalStorage();
 changeTheme();
-countItemsLeft();
+getTasksFromLocalStorage();
 
 switchElement.addEventListener('click', () => {
   darkMode = !darkMode;

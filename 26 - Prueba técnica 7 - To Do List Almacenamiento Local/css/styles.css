@@ -29,7 +29,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   max-width: 1440px;
   text-align: center;
   color: var(--text-color-completed);
@@ -89,7 +89,7 @@ body.dark {
 }
 
 @media screen and (min-width: 768px) {
-  .header__content {
+  .header-content {
     max-width: 540px;
   }
 }
@@ -224,6 +224,7 @@ body.dark {
   background-color: var(--task-bg);
   margin-bottom: 1rem;
   border-radius: 0 0 0.4rem 0.4rem;
+  isolation: isolate;
 }
 
 .filters {
@@ -231,7 +232,6 @@ body.dark {
   align-items: center;
   justify-content: space-evenly;
   height: 3rem;
-  padding-inline: 5.0625rem;
   background-color: var(--task-bg);
   border-radius: 0.3125rem;
 }
@@ -240,9 +240,8 @@ body.dark {
   .filters {
     position: absolute;
     bottom: 1.25rem;
-    left: 6rem;
-    width: 168px;
-    transform: translateX(50%);
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
