@@ -4,10 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Local Storage</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Prueba Técnica 8 - Clocks</title>
   </head>
   <body>
-    <h1>Local Storage</h1>
+    <main>
+      <div class="main-clocks">
+        <div class="digital-clock">
+          <div class="time">
+            <span id="hours">11</span>
+            <span>:</span>
+            <span id="minutes">06</span>
+          </div>
+          <div class="date">
+            <span id="day-of-week">Saturday</span>
+            <span id="day">14</span>
+            <span id="month">January</span>
+            <span id="year">2023</span>
+          </div>
+        </div>
+        <div class="analogic-clock">
+          <div class="outer-clock-face">
+            <div class="marking marking-one"></div>
+            <div class="marking marking-two"></div>
+            <div class="marking marking-three"></div>
+            <div class="marking marking-four"></div>
+            <div class="inner-clock-face">
+              <div id="hour-hand" class="hand hour-hand"></div>
+              <div id="minute-hand" class="hand min-hand"></div>
+              <div id="second-hand" class="hand second-hand"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="js/scripts.js"></script>
   </body>
 </html>

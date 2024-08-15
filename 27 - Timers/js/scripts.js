@@ -1,8 +1,17 @@
-// setItem
-// getItem
-// clear
+// setInterval(callback, timeToRepeat)
+// clearInterval(interval)
 
-// JSON.stringify
-// JSON.parse
+const countDownElement = document.getElementById('countdown');
+let intervalId;
+let counter = 10;
 
-const LS = window.localStorage;
+const countdown = () => {
+  countDownElement.textContent = counter;
+  if (counter <= 0) {
+    clearInterval(intervalId);
+  }
+  counter--;
+};
+intervalId = setInterval(countdown, 1000);
+
+countdown();

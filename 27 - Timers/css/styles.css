@@ -1,0 +1,17 @@
+body {
+  background-color: #333;
+  color: aliceblue;
+  font-family: sans-serif;
+}
+
+.box {
+  width: 100%;
+  height: 200px;
+  background-color: orange;
+  translate: calc(-100% - 16px);
+  transition: translate 1s;
+}
+
+.show-banner {
+  translate: 0;
+}

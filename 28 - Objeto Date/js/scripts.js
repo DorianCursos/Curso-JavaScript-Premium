@@ -1,8 +1,3 @@
-// setItem
-// getItem
-// clear
+const date = new Date();
 
-// JSON.stringify
-// JSON.parse
-
-const LS = window.localStorage;
+console.log(date.getMilliseconds());
